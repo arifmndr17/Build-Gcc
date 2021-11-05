@@ -35,7 +35,7 @@ rel_friendly_date="$(date "+%B %-d, %Y")" # "Month day, year" format
 builder_commit="$(git rev-parse HEAD)"
 
 # Send a notificaton to TG
-tg_post_msg "<b>Finix GCC: Toolchain Compilation Started</b>%0A<b>Date : </b><code>$rel_friendly_date</code>%0A<b>Toolchain Script Commit : </b><code>$builder_commit</code>%0A"
+tg_post_msg "<b>ExtHyper GCC: Toolchain Compilation Started</b>%0A<b>Date : </b><code>$rel_friendly_date</code>%0A<b>Toolchain Script Commit : </b><code>$builder_commit</code>%0A"
 
 echo ::set-output name=date::$(/bin/date -u "+%Y%m%d")
 alias gcc=gcc-10

@@ -1,0 +1,19 @@
+kind: pipeline
+name : LLVM Toolchain Compiler
+version: rev1.5_template
+steps:
+ - name: LLVM-tc Compilation
+   image: xyzuan/xdocker:latest
+   environment:
+     TG_TOKEN:
+       from_secret: TELEGRAM_BOT_TOKEN
+     TG_CHAT_ID:
+       from_secret: CHAT
+     GH_USERNAME:
+       from_secret: USERNAME
+     GH_EMAIL:
+       from_secret: EMAIL
+     GH_TOKEN:
+       from_secret: API_TOKEN_GITHUB
+   commands:
+     - bash llvm-tc_build.sh
